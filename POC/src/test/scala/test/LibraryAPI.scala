@@ -1,6 +1,7 @@
 package test
 
 import scala.concurrent.duration._
+import java.lang.*
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
@@ -9,7 +10,7 @@ import io.gatling.jdbc.Predef._
 class LibraryAPI extends Simulation {
 
 	val httpProtocol = http
-		.baseUrl("http://openlibrary.org")
+		.baseUrl(java.lang.String.valueOf(sys.env.get("BASE_URL")))
 		.inferHtmlResources()
 		.acceptHeader("*/*")
 		.acceptEncodingHeader("gzip, deflate")
