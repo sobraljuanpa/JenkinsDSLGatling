@@ -6,7 +6,7 @@ job('RunGatlingTests') {
     scm {
         git {
             remote {
-                github('sobraljuanpa/JenkinsGatlingDSL', 'https')
+                github('sobraljuanpa/JenkinsDSLGatling', 'https')
                 credentials('githubCredentials')
             }
         }
