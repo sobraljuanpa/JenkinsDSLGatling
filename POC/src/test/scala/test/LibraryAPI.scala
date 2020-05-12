@@ -8,10 +8,9 @@ import io.gatling.http.Predef._
 import io.gatling.jdbc.Predef._
 
 class LibraryAPI extends Simulation {
-	val baseUrl = System.getProperty("baseUrl")
 
 	val httpProtocol = http
-		.baseUrl("${baseUrl}")
+		.baseUrl(System.getProperty("baseUrl"))
 		.inferHtmlResources()
 		.acceptHeader("*/*")
 		.acceptEncodingHeader("gzip, deflate")
