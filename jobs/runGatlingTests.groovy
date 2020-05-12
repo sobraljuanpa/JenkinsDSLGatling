@@ -17,7 +17,7 @@ job('RunGatlingTests') {
     }
     
     environmentVariables {
-        env('BASE_URL', 'http://openlibrary.org')
+        env('MAVEN_OPTS', '-DbaseUrl=http://openlibrary.org')
     }
 
     steps {
