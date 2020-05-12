@@ -1,1 +1,3 @@
 # JenkinsDSLGatling
+
+Muestra trigger
