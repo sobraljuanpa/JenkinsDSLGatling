@@ -11,13 +11,13 @@ job('RunGatlingTests') {
             }
         }
     }
-    
-    environmentVariables {
-        env('BASE_URL', 'http://openlibrary.org')
-    }
 
     parameters {
         choiceParam('simulation', ['LibraryAPI (default)', 'RecipesAPI'], 'Simulation to be executed')
+    }
+    
+    environmentVariables {
+        env('BASE_URL', 'http://openlibrary.org')
     }
 
     steps {
