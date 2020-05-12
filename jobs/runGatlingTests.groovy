@@ -13,7 +13,7 @@ job('RunGatlingTests') {
     }
 
     parameters {
-        choiceParam('simulation', ['LibraryAPI (default)', 'RecipesAPI'], 'Simulation to be executed')
+        choiceParam('simulation', ['LibraryAPI', 'RecipesAPI'], 'Simulation to be executed')
     }
     
     environmentVariables {
