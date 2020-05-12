@@ -1,7 +1,7 @@
 package test
 
 import scala.concurrent.duration._
-import java.lang.*
+import java.lang._
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
