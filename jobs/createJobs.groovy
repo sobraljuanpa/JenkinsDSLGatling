@@ -6,7 +6,7 @@ job('Create jobs from repository') {
     scm {
         git {
             remote {
-                github('sobraljuanpa/JenkinsGatlingDSL', 'https')
+                github('sobraljuanpa/GatlingJenkinsDSL', 'https')
                 credentials('githubCredentials')
             }
         }
