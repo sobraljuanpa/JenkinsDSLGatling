@@ -14,13 +14,10 @@ job('RunGatlingTests') {
 
     parameters {
         choiceParam('simulation', ['LibraryAPI', 'RecipesAPI'], 'Simulation to be executed')
-    }
-    
-    environmentVariables {
-        env('MAVEN_OPTS', '-DbaseUrl=http://openlibrary.org')
+        choiceParam('baseUrl', ['http://openlibrary.org', 'other'], 'Base URL for simulation')
     }
 
     steps {
-        shell('cd POC && mvn clean gatling:test -Dgatling.simulationClass=test.${simulation}')
+        shell('cd POC && MAVEN_OPTS="-DbaseUrl=${baseUrl}" mvn clean gatling:test -Dgatling.simulationClass=test.${simulation}')
     }
 }
