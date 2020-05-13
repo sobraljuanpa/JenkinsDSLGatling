@@ -18,6 +18,6 @@ job('RunGatlingTests') {
     }
 
     steps {
-        shell('cd POC && MAVEN_OPTS="-DbaseUrl=${baseUrl}" mvn clean gatling:test -Dgatling.simulationClass=test.${simulation}')
+        shell('cd POC && mvn clean gatling:test -Dgatling.simulationClass=test.${simulation} -DbaseUrl=${baseUrl}')
     }
 }
