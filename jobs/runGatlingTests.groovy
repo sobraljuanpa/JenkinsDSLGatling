@@ -20,4 +20,8 @@ job('RunGatlingTests') {
     steps {
         shell('cd POC && mvn clean gatling:test -Dgatling.simulationClass=test.${simulation} -DbaseUrl=${baseUrl}')
     }
+
+    publishers {
+        archiveGatling()
+    }
 }
